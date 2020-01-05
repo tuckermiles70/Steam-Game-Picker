@@ -3,3 +3,5 @@ Get Steam Inventories:
 
         Site which helped me formulate request: https://steamapi.xpaw.me/#IPlayerService/GetOwnedGames
 
+        JSON Formatter: http://jsonviewer.stack.hu/
+
