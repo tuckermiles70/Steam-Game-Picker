@@ -1,16 +1,78 @@
 <!doctype html>
 <html lang="en">
-  <head>
-    <!-- Required meta tags -->
-    <meta charset="utf-8">
-    <meta name="viewport" content="width=device-width, initial-scale=1, shrink-to-fit=no">
 
-    <!-- Bootstrap CSS -->
-    <link rel="stylesheet" href="https://stackpath.bootstrapcdn.com/bootstrap/4.3.1/css/bootstrap.min.css" integrity="sha384-ggOyR0iXCbMQv3Xipma34MD+dH/1fQ784/j6cY/iJTQUOhcWr7x9JvoRxT2MZw1T" crossorigin="anonymous">
+<head>
+  <!-- Required meta tags -->
+  <meta charset="utf-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1, shrink-to-fit=no">
 
-    <title>Hello, world!</title>
-  </head>
-  <body>
-    <h1>Hello, world!</h1>
-  </body>
+  <!-- Bootstrap CSS -->
+  <link rel="stylesheet" href="https://stackpath.bootstrapcdn.com/bootstrap/4.3.1/css/bootstrap.min.css"
+    integrity="sha384-ggOyR0iXCbMQv3Xipma34MD+dH/1fQ784/j6cY/iJTQUOhcWr7x9JvoRxT2MZw1T" crossorigin="anonymous">
+
+  <title>Steam Game Picker</title>
+
+  <style>
+    body {
+      margin-top: 70px;
+      background: #333;
+      color: #fff;
+    }
+  </style>
+
+</head>
+
+<body>
+  <div class="container">
+    <div class="row">
+      <div class="col-md-6 offset-md-3">
+        <h1 class="display-4 text-center mb-3">Steam Game Picker</h1>
+        <form>
+          <div class="form-group">
+            <input id="lbsInput" type="text" class="form-control form-control-lg" placeholder="Enter SteamID">
+          </div>
+        </form>
+        <div id="output">
+          <ul class="list-group">
+            <li class="list-group-item list-group-item-info">game 1</li>
+            <li class="list-group-item list-group-item-info">game 2</li>
+            <li class="list-group-item list-group-item-info">game 3</li>
+            <li class="list-group-item list-group-item-info">game 4</li>
+            <li class="list-group-item list-group-item-info">game 5</li>
+            <li class="list-group-item list-group-item-info">game 6</li>
+          </ul>
+        </div>
+      </div>
+    </div>
+  </div>
+
+  <script>
+    /*
+    const fetch = require("node-fetch"); //To make request
+
+    //returns length
+    function length(obj) {
+      return Object.keys(obj).length;
+    }
+
+    function doSomething(success) {
+      //do whatever you like
+      var response = JSON.parse(JSON.stringify(success));
+      var games;
+      for (var i = 0; i < length(response.response.games); i++) {
+        //console.log(response.response.games[i].name);  //Logging proper syntax to just retrieve games.
+        games.push(response.response.games[i].name);
+        console.log(games);
+      }
+    }
+
+    fetch('https://api.steampowered.com/IPlayerService/GetOwnedGames/v1/?key=F778122CA758FA979CAFF41B8081EF58&steamid=76561198138426605&include_appinfo=1')
+      .then(data => data.json())
+      .then(success => doSomething(success));
+    */
+
+  </script>
+
+</body>
+
 </html>
