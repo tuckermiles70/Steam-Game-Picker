@@ -24,7 +24,21 @@
       
       //console.log(cur);  //Logging proper syntax to just retrieve games.
     }
+
     for (var i = 0; i < games.length; i++) {
       console.log(games[i]);
     }
+
+    ul = document.createElement('ul');
+    document.getElementById('myGameList').appendChild(ul);
+
+    games.forEach(function (item) {
+      let li = document.createElement('li');
+      ul.appendChild(li);
+
+      li.innerHTML += item;
+
+    });
+
   });
+
