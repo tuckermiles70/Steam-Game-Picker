@@ -38,10 +38,20 @@ fetch('https://api.steampowered.com/IPlayerService/GetOwnedGames/v1/?key=F778122
       }
     }
    */
-  
-    const Url = 'https://api.steampowered.com/IPlayerService/GetOwnedGames/v1/?key=F778122CA758FA979CAFF41B8081EF58&steamid=76561198138426605&include_appinfo=1';
 
-    $.getJSON(URL), function(data) {
+  //returns length
+  function length(obj) {
+    return Object.keys(obj).length;
+  }
 
+   //Had to modify URL to fix CORS issue. Doc in Extras
+   const Url = 'https://cors-anywhere.herokuapp.com/https://api.steampowered.com/IPlayerService/GetOwnedGames/v1/?key=F778122CA758FA979CAFF41B8081EF58&steamid=76561198138426605&include_appinfo=1';
+
+  $.getJSON(Url, function(data) {
+    var response = JSON.parse(JSON.stringify(data));
+    //console.log(data.response.games[0].name);
+    for (var i = 0; i < length(response.response.games); i++) {
+      console.log(response.response.games[i].name);  //Logging proper syntax to just retrieve games.
     }
+  });
 

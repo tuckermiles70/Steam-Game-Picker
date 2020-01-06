@@ -50,14 +50,7 @@
   <!-- jQuery (necessary for Bootstrap's JavaScript plugins) -->
   <script src="https://ajax.googleapis.com/ajax/libs/jquery/1.12.4/jquery.min.js"></script>
 
-  <script>
-
-    //Had to modify URL to fix CORS issue. Doc in Extras
-    $.getJSON('https://cors-anywhere.herokuapp.com/https://api.steampowered.com/IPlayerService/GetOwnedGames/v1/?key=F778122CA758FA979CAFF41B8081EF58&steamid=76561198138426605&include_appinfo=1', function(data) {
-      var response = JSON.parse(JSON.stringify(data));
-      console.log(data.response.games[1].name);
-    });
-  </script>
+  <script src="./GetGames.js"></script>
 
   <!--<script src="./GetGames.js"></script>-->
 
