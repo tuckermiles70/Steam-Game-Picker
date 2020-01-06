@@ -44,14 +44,27 @@ fetch('https://api.steampowered.com/IPlayerService/GetOwnedGames/v1/?key=F778122
     return Object.keys(obj).length;
   }
 
-   //Had to modify URL to fix CORS issue. Doc in Extras
-   const Url = 'https://cors-anywhere.herokuapp.com/https://api.steampowered.com/IPlayerService/GetOwnedGames/v1/?key=F778122CA758FA979CAFF41B8081EF58&steamid=76561198138426605&include_appinfo=1';
+  //Had to modify URL to fix CORS issue. Doc I used for reference in Extras
+  const Url = 'https://cors-anywhere.herokuapp.com/https://api.steampowered.com/IPlayerService/GetOwnedGames/v1/?key=F778122CA758FA979CAFF41B8081EF58&steamid=76561198138426605&include_appinfo=1';
+  var games = new Array();  
 
   $.getJSON(Url, function(data) {
     var response = JSON.parse(JSON.stringify(data));
-    //console.log(data.response.games[0].name);
+    //var len = length(response.response.games);
+    //console.log(len);
     for (var i = 0; i < length(response.response.games); i++) {
-      console.log(response.response.games[i].name);  //Logging proper syntax to just retrieve games.
+      //games.push(response.response.games[i].name);
+      var cur = response.response.games[i].name;
+      console.log('pushing ' + cur + ' onto games');
+      //games.push(cur);
+      //console.log(cur);  //Logging proper syntax to just retrieve games.
     }
   });
 
+/*
+  console.log('botto');
+  console.log(games.length);
+  for (var i = 0; i < games.length; i++) {
+    console.log(games[i]);
+  }
+*/
